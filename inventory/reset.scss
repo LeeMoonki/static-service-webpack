@@ -1,0 +1,229 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: $brand auto 0.05em;
+}
+
+html {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 300px;
+  min-height: 100%;
+  background-color: $white;
+  // not recommended anymore
+  // -moz-osx-font-smoothing: grayscale;
+  // -webkit-font-smoothing: antialiased;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling:touch;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  line-height: 1.625;
+  scroll-behavior: smooth;
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  text-size-adjust: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  color: $black;
+  background-color: $background;
+}
+
+h1 {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: $black-bis;
+}
+
+a strong {
+  color: currentColor;
+}
+
+strong {
+  color: $black;
+  font-weight: 700;
+}
+
+small {
+  font-size: 0.875em;
+}
+
+span {
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+// a11y - visually hidden
+// 보여지는 것에서 숨기고 웹 접근성을 위한 도구에는 노출시킨다.
+.visually_hidden {
+  border: 0;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// TODO: FIXME
+.visually-hidden .skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+input::placeholder {
+  color: $black-light;
+  font-size: 0.9rem;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.container {
+  @media screen and (min-width: 1473px) {
+    max-width: 1440px;
+    width: 1440px;
+  }
+  @include media(laptop) {
+    padding: 1rem;
+  }
+  @include media(mobile) {
+    padding: 0.5rem;
+  }
+}
+
+.columns,
+.columns:last-child {
+  margin: 0;
+}
+
+.box {
+  border-radius: 1px;
+}
+
+.content {
+  word-break: break-word;
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  h6 {
+    font-size: 1.125rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  pre,
+  code {
+    padding: 0.2rem;
+    background-color: color(background_grey);
+  }
+
+  blockquote {
+    padding: 1rem;
+  }
+}
+
+.progress {
+  border-radius: 0;
+  height: 18px;
+}
+
+.image img.is-rounded {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.navbar-dropdown.is-boxed,
+.navbar.is-spaced .navbar-dropdown {
+  transition: none;
+}
+
+.modal-card {
+  .modal-card-body {
+    padding-bottom: 0;
+  }
+  .modal-card-foot {
+    border-top: none;
+  }
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1.125rem;
+}
+p {
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
